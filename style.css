@@ -1,11 +1,16 @@
 body {
     align-content: center;
     text-align: center;
+    justify-content: center;
     background-image: url(https://cdn.discordapp.com/attachments/619533680158834689/668779123971194890/werkzaamheden.png);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
     background-color: green;
+}
+video {
+    visibility: visible;
+    opacity: unset;
 }
 
 .Warning {
@@ -23,15 +28,24 @@ body {
     align-content: space-around;
     justify-content: space-around;
 }
-
-button {
+button.navbar {
     color: currentColor;
-    /*border-radius: 150%;*/
+    border-radius: 300%;
     background-color: transparent;
     border-color: black;
-    border-style: dotted;
+    cursor: pointer;
+}
+button {
+    color: unset;
+    /*border-radius: 150%;*/
+    background-color: unset;
+    border-color: black;
     border-width: thin;
     cursor: pointer;
+}
+a {
+    color: black;
+    text-decoration: none;
 }
 .Police {
     color: white;
