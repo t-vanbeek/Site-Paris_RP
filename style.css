@@ -8,3 +8,30 @@
         opacity: 0;
     }
 }
+
+button {
+    color: currentColor;
+    /*border-radius: 150%;*/
+    background-color: transparent;
+}
+a.Police {
+    color: white;
+    background-color: blue;
+}
+a.RAID {
+    text-decoration: white;
+    color: white;
+    background-color: black;
+}
+a.Pompiers {
+    color: black;
+    background-color: red;
+}
+a.Ambulance {
+    color: black;
+    background-color: yellow;
+}
+a.Commune {
+    color: white;
+    background-color: brown;
+}
