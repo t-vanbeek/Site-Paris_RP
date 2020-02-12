@@ -2,11 +2,11 @@ body {
     align-content: center;
     text-align: center;
     justify-content: center;
-    background-image: url(https://cdn.discordapp.com/attachments/619533680158834689/668779123971194890/werkzaamheden.png);
+   /* background-image: url(https://cdn.discordapp.com/attachments/619533680158834689/668779123971194890/werkzaamheden.png); */
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    background-color: green;
+    background-color: black;
 }
 video {
     visibility: visible;
