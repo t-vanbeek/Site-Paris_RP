@@ -6,8 +6,8 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    background-color: black;
-    color: white;
+    background-color: green;
+    color: #00aec2;
 }
 video {
     visibility: visible;
@@ -33,7 +33,7 @@ img {
     justify-content: space-around;
 }
 button.navbar {
-    color: white;
+    color: currentColor;
     border-radius: 300%;
     background-color: transparent;
     border-color: black;
