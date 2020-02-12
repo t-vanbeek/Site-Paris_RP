@@ -10,7 +10,9 @@ body {
     color: #00aec2;
 }
 .video {
-    width: 150px; 
+    width: 400px; 
+    display: block;
+    margin: auto;
 }
 
 .Warning {
