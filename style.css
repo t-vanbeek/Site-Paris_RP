@@ -9,9 +9,8 @@ body {
     background-color: green;
     color: #00aec2;
 }
-video {
-    visibility: visible;
-    opacity: unset;
+.video {
+    width: 150px; 
 }
 
 .Warning {
