@@ -11,7 +11,7 @@ body {
 }
 .video {
     width: 400px; 
-    display: block;
+    display: inline-block;
     margin: auto;
 }
 
