@@ -33,7 +33,7 @@ img {
     justify-content: space-around;
 }
 button.navbar {
-    color: currentColor;
+    color: white;
     border-radius: 300%;
     background-color: transparent;
     border-color: black;
