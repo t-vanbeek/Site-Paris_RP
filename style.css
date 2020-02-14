@@ -77,3 +77,8 @@ a {
 display: flex;
 flex-flow: column;
 }
+.solli {
+    display: inline-flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
