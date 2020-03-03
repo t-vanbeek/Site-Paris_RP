@@ -1,84 +1,40 @@
-body {
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-   /* background-image: url(https://cdn.discordapp.com/attachments/619533680158834689/668779123971194890/werkzaamheden.png); */
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    background-color: green;
-    color: #00aec2;
-}
-.video {
-    width: 400px; 
-    display: inline-block;
-    margin: auto;
-}
-
-.Warning {
-    color: red !important;
-    animation: blinker 2s linear infinite;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-img {
-    width: 15px;
-}
-.navbar {
-    display: flex;
-    align-content: space-around;
-    justify-content: space-around;
-}
-button.navbar {
-    color: currentColor;
-    border-radius: 300%;
-    background-color: transparent;
-    border-color: black;
-    cursor: pointer;
-}
-button {
-    color: unset;
-    /*border-radius: 150%;*/
-    background-color: unset;
-    border-color: black;
-    border-width: thin;
-    cursor: pointer;
-}
-a {
-    color: black;
-    text-decoration: none;
-}
-.Police {
-    color: white;
-    background-color: blue;
-}
-.RAID {
-    text-decoration: white;
-    color: white;
+.background {
     background-color: black;
 }
-.Pompiers {
-    color: black;
-    background-color: red;
+
+.border {
+    border: 4px solid orangered;
+    border-radius: 8px;
+    width: 30%;
+    padding: 5px;
+    margin: auto;
+    color: greenyellow;
+    text-align: center;
 }
-.Ambulance {
-    color: black;
-    background-color: yellow;
+
+.border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.Commune {
+.confirmation {
     color: white;
-    background-color: brown;
+    display: hidden;
 }
-.breaking_news {
-display: flex;
-flex-flow: column;
+.login {
+    text-align: center;
+    width: 25%;
+    border: 3px solid orangered;
+    border-radius: 8px;
+    margin: auto;
+    padding: 5px;
+    color: greenyellow;
 }
-.solli {
-    display: inline-flex;
-    align-content: flex-end;
-    justify-content: flex-end;
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
