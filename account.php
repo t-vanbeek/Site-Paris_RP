@@ -50,17 +50,18 @@ $run->execute([$newRank, $_GET['id']]);
 </head>
 
 <body class="background">
-    <h1 style="color: white;">
+    <h1 style="color: white; text-align: center;">
         <?php
         if (isset($_SESSION['rank']) && isset($_SESSION['username'])) {
-            echo "Welkom ' " . $_SESSION['username'];
+            echo "Welkom ' " . $_SESSION['username'] . " '";
         }
         ?>
+    </h1>
         <div class="tabel">
             <?php
             $stmt = $pdo->query("SELECT * FROM accounts WHERE id = " . $_GET['id']);
             ?>
-            <form method="POST" action="">
+            <form method="POST" action="" class="letter">
                 <?php
                 foreach ($stmt as $row) {
                     echo "<h4> Naam: " . $row['naam'] . "<br>";
@@ -70,7 +71,7 @@ $run->execute([$newRank, $_GET['id']]);
                 }
                 ?>
                 <h3>Rank aanpassen</h3>
-                <h5>
+                <h5 class="letter">
                     <input type="radio" id="Rank" name="Rank" value="Head Manager">Head Manager <br>
                     <input type="radio" id="Rank" name="Rank" value="Manager">Manager<br>
                     <input type="radio" id="Rank" name="Rank" value="HR">HR<br>
@@ -78,3 +79,9 @@ $run->execute([$newRank, $_GET['id']]);
                     <input type="submit" name="Send" value="Opsturen">
                 </h5>
             </form>
+        </div>
+        <div class="sidebar">
+            <a href="accept.php">Terug</a>
+        </div>
+</body>
+</html>
