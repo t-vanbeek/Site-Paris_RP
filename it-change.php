@@ -92,12 +92,10 @@ if (isset($_POST['Send'])) {
         <a href="it.php">Terug</a>
         <span class="letter">
             <?php
-            foreach ($stmt as $row) {
                 echo "Naam: " . $NAME . "<br>";
                 echo "ID: " . $discID . "<br>";
                 echo "Rank: " . $currentRank . "<br>";
                 echo "Wachtwoord: " . $password . "<br>";
-            }
             ?>
         </span>
     </div>
