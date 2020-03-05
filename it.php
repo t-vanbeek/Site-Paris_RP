@@ -53,7 +53,7 @@ if (isset($_SESSION['rank'])) {
         <?php
         $stmt = $pdo->query('SELECT id, naam, discord_id, Rank FROM accounts');
         foreach ($stmt as $row) {
-            echo "<p style='font-size: 8'> Naam: " . $row['naam'] . " | ID: " . $row['discord_id'] . " | Rank: " . $row['Rank'] . " | <a class='letter' href='account.php?id=" . $row['id'] . "'> Account aanpassen </a><br>";
+            echo "<p style='font-size: 8'> Naam: " . $row['naam'] . " | ID: " . $row['discord_id'] . " | Rank: " . $row['Rank'] . " | <a class='letter' href='it-change.php?id=" . $row['id'] . "'> Account aanpassen </a><br>";
         }
         ?>
         </p>
