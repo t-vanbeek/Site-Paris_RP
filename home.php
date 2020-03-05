@@ -29,6 +29,7 @@ if (isset($_SESSION['rank'])) {
         </h1>
     </div>
     <div class="sidebar">
+        <a href="it.php">IT ONLY</a><br>
         <a href="accept.php">Accepteer accounts oc+</a><br>
         <a href="interviews.php">HR Interviews manager+</a><br>
         <a href="index.php" class="logout">Logout</a>
