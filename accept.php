@@ -17,7 +17,7 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int) $e->getCode());
 }
-header('refresh:5;url=https://paris-roleplay.eu/accept.php/');
+header('refresh:5;');
 if ($_SESSION['logged_in'] != true) {
     header('Location: login.php');
 }
