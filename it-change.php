@@ -67,6 +67,7 @@ if (isset($_POST['Send'])) {
             $NAME = $row['naam'];
             $discID = $row['discord_id'];
             $password = $row['Password'];
+            $currentRank = $row['Rank'];
         }
         ?>
         <form method="POST" action="" class="letter">
@@ -92,10 +93,10 @@ if (isset($_POST['Send'])) {
         <span class="letter">
             <?php
             foreach ($stmt as $row) {
-                echo "Naam: " . $row['naam'] . "<br>";
-                echo "ID: " . $row['discord_id'] . "<br>";
-                echo "Rank: " . $row['Rank'] . "<br>";
-                echo "Wachtwoord: " . $row['Password'] . "<br>";
+                echo "Naam: " . $NAME . "<br>";
+                echo "ID: " . $discID . "<br>";
+                echo "Rank: " . $currentRank . "<br>";
+                echo "Wachtwoord: " . $password . "<br>";
             }
             ?>
         </span>
