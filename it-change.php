@@ -21,26 +21,25 @@ try {
 if ($_SESSION['logged_in'] != true) {
     header('Location: login.php');
 }
-if(isset($_SESSION['rank'])){
-if ($_SESSION['rank'] != "IT"){
-    header('Location: home.php');
-}
-}else {
+if (isset($_SESSION['rank'])) {
+    if ($_SESSION['rank'] != "IT") {
+        header('Location: home.php');
+    }
+} else {
     header('Location: index.php');
 }
 $newRank = "Kies een Rank hieronder!";
-if (isset($_POST['Rank']) && !empty($_POST['Rank'])){
-    
+if (isset($_POST['Rank']) && !empty($_POST['Rank'])) {
 }
 if (isset($_POST['Send'])) {
     $newRank = $_POST['Rank'];
     $naam = $_POST['naam'];
     $id = $_POST['id'];
     $ww = $_POST['password'];
-$sql = "UPDATE accounts SET naam=?, Password=?, discord_id=?, Rank=? WHERE id=?";
-$run = $pdo->prepare($sql);
-$run->execute([$naam, $ww, $id, $newRank, $_GET['id']]);
-header('Location: accept.php');
+    $sql = "UPDATE accounts SET naam=?, Password=?, discord_id=?, Rank=? WHERE id=?";
+    $run = $pdo->prepare($sql);
+    $run->execute([$naam, $ww, $id, $newRank, $_GET['id']]);
+    header('Location: it.php');
 }
 ?>
 <!DOCTYPE html>
@@ -61,38 +60,41 @@ header('Location: accept.php');
         }
         ?>
     </h1>
-        <div class="tabel">
-            <?php
-            $stmt = $pdo->query("SELECT * FROM accounts WHERE id = " . $_GET['id']);
-            ?>
-            <form method="POST" action="" class="letter">
-                <h3><?php
+    <div class="tabel">
+        <?php
+        $stmt = $pdo->query("SELECT * FROM accounts WHERE id = " . $_GET['id']);
+        ?>
+        <form method="POST" action="" class="letter">
+            <h3><?php
                 $row['naam']
-                ?>  aanpassen</h3>
-                <h5 class="letter">
-                    <input type="text" id="naam" name="naam" value="<?php $row['naam'] ?>"><br>
-                    <input type="number" id="discord_id" name="id" value="<?php $row['discord_id'] ?>"><br>
-                    <input type="text" id="wachtwoord" name="password" value="<?php $row['Password'] ?>"><br>
-                    <input type="radio" id="Rank" name="Rank" value="IT">IT<br>
-                    <input type="radio" id="Rank" name="Rank" value="Owner">Owner<br>
-                    <input type="radio" id="Rank" name="Rank" value="Head Manager">Head Manager<br>
-                    <input type="radio" id="Rank" name="Rank" value="Manager">Manager<br>
-                    <input type="radio" id="Rank" name="Rank" value="HR">HR<br>
-                    <input type="radio" id="Rank" name="Rank" value="In Afwachting">Deactiveer<br>
-                    <input type="submit" name="Send" value="Opsturen">
-                </h5>
-            </form>
-        </div>
-        <div class="sidebar">
-            <a href="accept.php">Terug</a>
+                ?> aanpassen</h3>
+            <h5 class="letter">
+                <input type="text" id="naam" name="naam" value="<?php $row['naam'] ?>"><br>
+                <input type="number" id="discord_id" name="id" value="<?php $row['discord_id'] ?>"><br>
+                <input type="text" id="wachtwoord" name="password" value="<?php $row['Password'] ?>"><br>
+                <input type="radio" id="Rank" name="Rank" value="IT">IT<br>
+                <input type="radio" id="Rank" name="Rank" value="Owner">Owner<br>
+                <input type="radio" id="Rank" name="Rank" value="Head Manager">Head Manager<br>
+                <input type="radio" id="Rank" name="Rank" value="Manager">Manager<br>
+                <input type="radio" id="Rank" name="Rank" value="HR">HR<br>
+                <input type="radio" id="Rank" name="Rank" value="In Afwachting">Deactiveer<br>
+                <input type="submit" name="Send" value="Opsturen">
+            </h5>
+        </form>
+    </div>
+    <div class="sidebar">
+        <a href="it.php">Terug</a>
+        <span class="letter">
             <?php
-                foreach ($stmt as $row) {
-                    echo "Naam: " . $row['naam'] . "<br>";
-                    echo "ID: " . $row['discord_id'] . "<br>";
-                    echo "Rank: " . $row['Rank'] . "<br>";
-                    echo "New Rank: " . $row['Password']. "<br>";
-                }
-                ?>
-        </div>
+            foreach ($stmt as $row) {
+                echo "Naam: " . $row['naam'] . "<br>";
+                echo "ID: " . $row['discord_id'] . "<br>";
+                echo "Rank: " . $row['Rank'] . "<br>";
+                echo "Wachtwoord: " . $row['Password'] . "<br>";
+            }
+            ?>
+        </span>
+    </div>
 </body>
+
 </html>
