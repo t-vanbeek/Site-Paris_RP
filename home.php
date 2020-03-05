@@ -1,6 +1,6 @@
 <?php
 require 'connect.php';
-$stmt = $pdo->query("SELECT * FROM accounts WHERE naam = " . $_SESSION['username']);
+$stmt = $pdo->query("SELECT * FROM accounts WHERE naam = LIKE " . $_SESSION['username']);
 foreach ($stmt as $row) {
     $_SESSION['username'] = $row['naam'];
     $_SESSION['password'] = $row['Password'];
