@@ -26,7 +26,6 @@ foreach ($stmt as $row) {
 if ($_SESSION['rank'] == "In Afwachting") {
     header('Location: login.php');
 }
-
 if ($_SESSION['logged_in'] != true) {
     header('Location: login.php');
 }
