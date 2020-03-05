@@ -17,12 +17,14 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int) $e->getCode());
 }
-$stmt = $pdo->query("SELECT * FROM accounts WHERE naam LIKE " . $_SESSION['username']);
+$user = $_SESSION['username'];
+$stmt = $pdo->query("SELECT * FROM accounts WHERE naam LIKE '$user'");
 foreach ($stmt as $row) {
     $_SESSION['username'] = $row['naam'];
     $_SESSION['password'] = $row['Password'];
     $_SESSION['rank'] = $row['Rank'];
 }
+header('refresh: 10;');
 if ($_SESSION['rank'] == "In Afwachting") {
     header('Location: login.php');
 }
