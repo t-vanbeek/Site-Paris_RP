@@ -23,7 +23,7 @@ if ($_SESSION['logged_in'] != true) {
 }
 
 if ($_SESSION['rank'] == "HR") {
-	header('Location: Home.php');
+	header('Location: home.php');
 	exit;
 }
 
