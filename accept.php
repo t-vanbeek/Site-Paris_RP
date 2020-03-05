@@ -30,7 +30,7 @@ if ($_SESSION['logged_in'] != true) {
 if ($_SESSION['rank'] == "In Afwachting") {
     header('Location: login.php');
 }
-}
+
 if (isset($_SESSION['rank'])) {
     if ($_SESSION['rank'] != "Owner" && $_SESSION['rank'] != "IT") {
         header('Location: home.php');
