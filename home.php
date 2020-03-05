@@ -19,6 +19,7 @@ if (isset($_SESSION['rank'])) {
 </head>
 
 <body>
+    <div class="tabel">
     <h1 style="color: white;">
         <?php
         if (isset($_SESSION['rank']) && isset($_SESSION['username'])) {
@@ -26,6 +27,7 @@ if (isset($_SESSION['rank'])) {
         }
         ?>
     </h1>
+    </div>
     <div class="sidebar">
         <a href="accept.php">Accepteer accounts oc+</a><br>
         <a href="interviews.php">HR Interviews manager+</a><br>
