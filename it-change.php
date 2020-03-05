@@ -63,15 +63,20 @@ if (isset($_POST['Send'])) {
     <div class="tabel">
         <?php
         $stmt = $pdo->query("SELECT * FROM accounts WHERE id = " . $_GET['id']);
+        foreach ($stmt as $row){
+            $NAME = $row['naam'];
+            $discID = $row['discord_id'];
+            $password = $row['Password'];
+        }
         ?>
         <form method="POST" action="" class="letter">
             <h3><?php
-                $stmt['naam']
+               echo $NAME;
                 ?> aanpassen</h3>
             <h5 class="letter">
-                <input type="text" placeholder="naam" id="naam" name="naam" value="<?php echo $stmt['naam'] ?>"><br>
-                <input type="number" placeholder="discord ID" id="discord_id" name="id" value="<?php echo $stmt['discord_id'] ?>"><br>
-                <input type="text" placeholder="Wachtwoord" id="wachtwoord" name="password" value="<?php echo $stmt['Password'] ?>"><br>
+                <input type="text" placeholder="naam" id="naam" name="naam" value="<?php echo $NAME ?>"><br>
+                <input type="number" placeholder="discord ID" id="discord_id" name="id" value="<?php echo $discID ?>"><br>
+                <input type="text" placeholder="Wachtwoord" id="wachtwoord" name="password" value="<?php echo $password ?>"><br>
                 <input type="radio" id="Rank" name="Rank" value="IT">IT<br>
                 <input type="radio" id="Rank" name="Rank" value="Owner">Owner<br>
                 <input type="radio" id="Rank" name="Rank" value="Head Manager">Head Manager<br>
