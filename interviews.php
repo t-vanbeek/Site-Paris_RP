@@ -52,9 +52,9 @@ if (isset($_POST['create'])) {
 </head>
 
 <body>
-    <a href="home.php"><button>Terug</button></a>
+    
     <h1 hidden class="confirmation">Probeer het later nog eens</h1>
-    <div class="border">
+    <div class="table">
         <h2>HR toevoegen</h2>
         <form action="interviews.php" method="POST">
             <h3>Naam:</h3>
@@ -77,7 +77,9 @@ if (isset($_POST['create'])) {
         </form>
 
     </div>
-
+<div class="sidebar">
+    <a href="home.php">Terug</a>
+</div>
 </body>
 
 </html>
