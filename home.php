@@ -20,13 +20,13 @@ if (isset($_SESSION['rank'])) {
 
 <body>
     <div class="tabel">
-    <h1 style="color: white;">
-        <?php
-        if (isset($_SESSION['rank']) && isset($_SESSION['username'])) {
-            echo "Welkom ' " . $_SESSION['rank'] . " || " . $_SESSION['username'] . " ' op de Staffsite!";
-        }
-        ?>
-    </h1>
+        <h1 style="color: white;">
+            <?php
+            if (isset($_SESSION['rank']) && isset($_SESSION['username'])) {
+                echo "Welkom ' " . $_SESSION['rank'] . " || " . $_SESSION['username'] . " ' op de Staffsite!";
+            }
+            ?>
+        </h1>
     </div>
     <div class="sidebar">
         <a href="accept.php">Accepteer accounts oc+</a><br>

@@ -37,6 +37,7 @@ if (isset($_POST['Send'])) {
 $sql = "UPDATE accounts SET Rank=? WHERE id=?";
 $run = $pdo->prepare($sql);
 $run->execute([$newRank, $_GET['id']]);
+header('Location: accept.php');
 }
 ?>
 <!DOCTYPE html>
