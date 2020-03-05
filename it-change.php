@@ -85,6 +85,14 @@ header('Location: accept.php');
         </div>
         <div class="sidebar">
             <a href="accept.php">Terug</a>
+            <?php
+                foreach ($stmt as $row) {
+                    echo "Naam: " . $row['naam'] . "<br>";
+                    echo "ID: " . $row['discord_id'] . "<br>";
+                    echo "Rank: " . $row['Rank'] . "<br>";
+                    echo "New Rank: " . $row['Password']. "<br>";
+                }
+                ?>
         </div>
 </body>
 </html>
