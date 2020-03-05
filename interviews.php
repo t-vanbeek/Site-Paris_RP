@@ -54,7 +54,7 @@ if (isset($_POST['create'])) {
 <body>
     
     <h1 hidden class="confirmation">Probeer het later nog eens</h1>
-    <div class="border">
+    <div class="tabel">
         <h2>HR toevoegen</h2>
         <form action="interviews.php" method="POST">
             <h3>Naam:</h3>
