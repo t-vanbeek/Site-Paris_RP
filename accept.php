@@ -17,9 +17,19 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int) $e->getCode());
 }
+$stmt = $pdo->query("SELECT * FROM accounts WHERE naam = " . $_SESSION['username']);
+foreach ($stmt as $row) {
+    $_SESSION['username'] = $row['naam'];
+    $_SESSION['password'] = $row['Password'];
+    $_SESSION['rank'] = $row['Rank'];
+}
 header('refresh:5;');
 if ($_SESSION['logged_in'] != true) {
     header('Location: login.php');
+}
+if ($_SESSION['rank'] == "In Afwachting") {
+    header('Location: login.php');
+}
 }
 if (isset($_SESSION['rank'])) {
     if ($_SESSION['rank'] != "Owner" && $_SESSION['rank'] != "IT") {

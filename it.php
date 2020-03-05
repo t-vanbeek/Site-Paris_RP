@@ -21,6 +21,10 @@ header('refresh:5;');
 if ($_SESSION['logged_in'] != true) {
     header('Location: login.php');
 }
+if ($_SESSION['rank'] == "In Afwachting") {
+    header('Location: login.php');
+}
+}
 if (isset($_SESSION['rank'])) {
     if ($_SESSION['rank'] != "IT") {
         header('Location: home.php');

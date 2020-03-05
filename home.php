@@ -1,5 +1,12 @@
 <?php
 require 'connect.php';
+$stmt = $pdo->query("SELECT * FROM accounts WHERE naam = " . $_SESSION['username']);
+foreach ($stmt as $row) {
+    $_SESSION['username'] = $row['naam'];
+    $_SESSION['password'] = $row['Password'];
+    $_SESSION['rank'] = $row['Rank'];
+}
+header('refresh: 10;');
 if (isset($_SESSION['rank'])) {
 
     if ($_SESSION['rank'] == "In Afwachting") {
