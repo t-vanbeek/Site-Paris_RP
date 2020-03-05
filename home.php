@@ -1,7 +1,10 @@
 <?php
 require 'connect.php';
-if ($_SESSION['rank'] == "In Afwachting") {
+if (isset($_SESSION['rank'])) {
+
+    if ($_SESSION['rank'] == "In Afwachting") {
         header('Location: login.php');
+    }
 }
 ?>
 
@@ -16,14 +19,17 @@ if ($_SESSION['rank'] == "In Afwachting") {
 </head>
 
 <body>
-	<h1 style="color: white;">
-		<?php
-		echo "Welkom ' " . $_SESSION['rank'] . " || " . $_SESSION['username'] . " ' op de Staffsite!";
-		?>
-	</h1>
-    <div class="border">
-        <a href="interviews.php"><button>Interviews</button></a>
-        <a href="index.php"><button>Logout</button></a>
+    <h1 style="color: white;">
+        <?php
+        if (isset($_SESSION['rank']) && isset($_SESSION['username'])) {
+            echo "Welkom ' " . $_SESSION['rank'] . " || " . $_SESSION['username'] . " ' op de Staffsite!";
+        }
+        ?>
+    </h1>
+    <div class="sidebar">
+        <a href="accept.php">Accepteer accounts oc+</a><br>
+        <a href="interviews.php">HR Interviews manager+</a><br>
+        <a href="index.php" class="logout">Logout</a>
     </div>
 </body>
 

@@ -43,9 +43,9 @@ if (isset($_POST['create'])) {
     <div class="border">
         <h2>Account aanmaken</h2>
         <form action="register.php" method="POST">
-            <h3>Naam:</h3>
+            <h3>Gebruikersnaam:</h3>
             <input style="border-radius:5px ;" type="text" id="name" name="name" required>
-            <h3>Discord ID:</h3>
+            <h3>Discord ID (18 cijferig):</h3>
             <input style="border-radius:5px ;" type="number" id="id" name="id" required>
             <h3>Wachtwoord:</h3>
             <input style="border-radius:5px ;" type="password" id="password" name="password" required>

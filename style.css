@@ -55,7 +55,7 @@
 
 .sidebar {
     height: 100%;
-    width: 160px;
+    width: 50px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -139,11 +139,11 @@
 }
 
 .tabel {
-    border: orangered;
-    color: orangered;
+    border: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
     border-style: solid;
-    height: 475px;
+    height: 600px;
     width: 50%;
     margin-top: 75px;
     margin-left: 300px;

@@ -52,7 +52,7 @@ if (isset($_POST['create'])) {
 </head>
 
 <body>
-    <a href="Home.php"><button>Terug</button></a>
+    <a href="home.php"><button>Terug</button></a>
     <h1 hidden class="confirmation">Probeer het later nog eens</h1>
     <div class="border">
         <h2>HR toevoegen</h2>
