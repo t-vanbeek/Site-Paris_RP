@@ -36,7 +36,7 @@ if (isset($_SESSION['rank'])) {
           <a href='it.php'>IT ONLY</a><br>  
           <a href='accept.php'>Accepteer accounts</a><br>
           <a href='interviews.php'>HR Interviews</a><br>
-          <a href='index.php' class'=logout'>Logout</a>  "; 
+          <a href='index.php' class='logout'>Logout</a>  "; 
         } elseif ($_SESSION['rank'] == "Owner") {
             echo "
             <a href='accept.php'>Accepteer accounts</a><br>
