@@ -30,10 +30,31 @@ if (isset($_SESSION['rank'])) {
         </h1>
     </div>
     <div class="sidebar">
-        <a href="it.php">IT ONLY</a><br>
-        <a href="accept.php">Accepteer accounts oc+</a><br>
-        <a href="interviews.php">HR Interviews manager+</a><br>
-        <a href="index.php" class="logout">Logout</a>
+        <?php
+        if($_SESSION['rank'] == "IT") {
+            echo "
+          <a href='it.php'>IT ONLY</a><br>  
+          <a href='accept.php'>Accepteer accounts</a><br>
+          <a href='interviews.php'>HR Interviews</a><br>
+          <a href='index.php' class'=logout'>Logout</a>  "; 
+        } elseif ($_SESSION['rank'] == "Owner") {
+            echo "
+            <a href='accept.php'>Accepteer accounts</a><br>
+            <a href='interviews.php'>HR Interviews</a><br>
+            <a href='index.php' class='logout'>Logout</a> ";  
+        } elseif ($_SESSION['rank'] == "Head Manager") {
+            echo "
+            <a href='interviews.php'>HR Interviews</a><br>
+            <a href='index.php' class='logout'>Logout</a> ";
+        }elseif ($_SESSION['rank'] == "Manager") {
+            echo "
+            <a href='interviews.php'>HR Interviews</a><br>
+            <a href='index.php' class='logout'>Logout</a> "; 
+        } elseif ($_SESSION['rank'] == "HR") {
+           echo "<a href='index.php' class='logout'>Logout</a> ";  
+        }
+        
+        ?>
     </div>
 </body>
 
